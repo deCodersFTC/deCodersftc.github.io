@@ -1,0 +1,88 @@
+<DOCTYPE ! HTML>
+  <html>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .tablink {
+      background-color: black;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 15px;
+      width: 13.83%;
+      height: 8%;
+    }
+
+    .tablinklogo {
+      background-color: black;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      width: 17%;
+      height: 8%;
+    }
+
+    .tablink:hover {
+      background-color: #ffd63f;
+    }
+
+    .center-text {
+      text-align: center;
+      font-family: Philosopher;
+    }
+
+    .logo {
+      width: 100%;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <head>
+    <link rel="stylesheet" type="style/css" href="WebpageHome.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <meta name="description" content="FTC Robotics Team">
+    <title>deCoders FTC</title>
+  </head>
+
+  <body>
+    <div id="Background"></div>
+    <div id="NavigationBar">
+    <ul>
+    <div>
+      <button class="tablinklogo"><img class="logo" src="https://i.imgur.com/lfx7ueK.png" /></button>
+      <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+      <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Join</button>
+      <button class="tablink" onclick="openPage('Contact', this, 'blue')">About Us</button>
+      <button class="tablink" onclick="openPage('Contact', this, 'blue')">Challenges</button>
+      <button class="tablink" onclick="openPage('Contact', this, 'blue')">Outreach</button>
+      <button class="tablink" onclick="openPage('About', this, 'orange')">Contact</button>
+    </div>
+    <h1 class="center-text">deCoders Robotics</h1>
+  </body>
+
+  </html>
