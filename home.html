@@ -1,11 +1,11 @@
 <DOCTYPE ! HTML>
   <html>
   <style>
+
     body,
     html {
       height: 100%;
       margin: 0;
-      font-family: Arial;
     }
 
     .tablink {
@@ -16,7 +16,7 @@
       outline: none;
       cursor: pointer;
       font-size: 15px;
-      width: 13.83%;  
+      width: 13.83%;
       height: 8%;
     }
 
@@ -52,16 +52,25 @@
 
     .centered {
       position: absolute;
-      top: 50%;
+      top: 20%;
       left: 50%;
       transform: translate(-50%, -50%);
+      font-family: Philosopher;
     }
+
+    .bg {
+      background-image: url("https://amp.insider.com/images/5c59e77ceb3ce80d46564023-750-563.jpg");
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
   </style>
 
   <head>
     <link rel="stylesheet" type="style/css" href="WebpageHome.css">
     <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montpaserrat&display=swap" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -70,19 +79,16 @@
   </head>
 
   <body>
-    <div id="Background"></div>
-    <div id="NavigationBar">
-    <ul>
     <div>
-      <button class="tablinklogo"><img class="logo" src="https://i.imgur.com/lfx7ueK.png" /></button>
-      <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-      <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Join</button>
-      <button class="tablink" onclick="openPage('Contact', this, 'blue')">About Us</button>
-      <button class="tablink" onclick="openPage('Contact', this, 'blue')">Challenges</button>
-      <button class="tablink" onclick="openPage('Contact', this, 'blue')">Outreach</button>
-      <button class="tablink" onclick="openPage('About', this, 'orange')">Contact</button>
+      <button class="tablinklogo" onclick="WebpageHome.html"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></button>
+      <button class="tablink">Home</button>
+      <button class="tablink">Join</button>
+      <a href="http://decodersftc.com/aboutus.html"><button class="tablink">About Us</button></a>
+      <button class="tablink">Challenges</button>
+      <button class="tablink">Outreach</button>
+      <button class="tablink">Contact</button>
     </div>
-    <h1 class="center-text">deCoders Robotics</h1>
-  </body>
+    <h1 class="centered">deCoders Robotics</h1>
+    <div class="bg"></div>
 
   </html>
