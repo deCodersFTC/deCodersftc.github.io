@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .navbar {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.7;
+    display:inline-block;
+    overflow: hidden;
+  }
+
+  .navbar-nav {
+    margin: 0%;
+    list-style: none;
+  }
+  .nav-item:hover{
+    background-color:#ffd63f;
+  }
+
+  .nav-item {
+    display: inline-block;
+    text-decoration: none;
+    float: right;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .nav-item a {
+    color: white;
+    text-decoration: none;
+
+  }
+
+  .navbar-nav .nav-item a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0.9em 0.7em;
+    color: white:;
+  }
+
+  .toggle-collapse {
+    float: right;
+    width: 45px;
+    height: 32px;
+
+    background-color: transparent;
+    color: rgba(232, 232, 232, 0.7);
+    border: 1px solid rgb(232, 232, 232, 0.3);
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+  }
+  .logotoggle{
+    list-style: none;
+  }
+  .toggle-collapse:hover {
+    color: rgb(232, 232, 232);
+  }
+
+  .logo {
+    width: 100px;
+    margin-top: -3px;
+    bottom: 10%  }
+
+  @media screen and (max-width: 700px) {
+
+    .logo {
+      width: 100px;
+    }
+
+    .toggle-collapse {
+      display: inline;
+    }
+    .navbar-nav {
+      color: white;
+      padding: 0%;
+
+    }
+    .nav-item{
+      display:block;
+      width:100%;
+    }
+    .nav-item:hover{
+      background-color:#ffd63f;
+    }
+
+    .navbar-collapse {
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      height: 0vh;
+      transition: all 499ms ease;
+    }
+
+    .collapse {
+      height: 100vh;
+    }
+  }
+
+  .centered {
+    font-family: Philosopher;
+    text-align: center;
+    top: 50%;
+  }
+
+  .bg {
+    background-image: url("http://www.montana.edu/first/_ldp/.private_ldp/a4112/production/master/1f31fa42-a266-4ca2-9e92-f438dc576368.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA Compatible" conent="ie=edge">
+  <title>Responsive Navigation</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+  <script src="https://kit.fontawesome.com/5cd35194e6.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Outreach</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Challenges</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="Calendar.html">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Join</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Home</a>
+          </li>
+          </div>
+          <ul class="logotoggle">
+            <li>
+              <button class="toggle-collapse">
+                <i class="fas fa-align-center"></i>
+              </button>
+            </li>
+          <li>
+            <a href="#" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
+          </li>
+        </ul>
+        </ul>
+
+  </nav>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    $('.toggle-collapse').click(function() {
+      $('.navbar-collapse').toggleClass("collapse")
+    })
+  });
+</script>
+
+</html>
