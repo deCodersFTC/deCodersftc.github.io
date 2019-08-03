@@ -9,188 +9,178 @@
 
   .navbar {
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.7;
+    display: inline-block;
+    overflow: hidden;
 
-    font-family: 'Moa<!DOCTYPE html>
-<html lang="en"><style>body,
-    html {
-      height: 100%;
-      margin: 0;
+  }
+
+  .navbar-nav {
+    margin: 0%;
+    list-style: none;
+  }
+
+  .nav-item:hover {
+    background-color: #ffd63f;
+  }
+
+  .nav-item {
+    display: inline-block;
+    text-decoration: none;
+    float: right;
+    padding-top: 5px;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .nav-item a {
+    color: white;
+    text-decoration: none;
+
+  }
+
+  .navbar-nav .nav-item a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    padding-top: 17px;
+    padding-right: 20px;
+    color: white;
+  }
+
+  .toggle-collapse {
+    float: right;
+    width: 45px;
+    height: 32px;
+    margin-top: -4px;
+    background-color: transparent;
+    color: rgb(232, 232, 232, 0.7);
+    border: 1px solid rgb(232, 232, 232, 0.3);
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .logotoggle {
+    list-style: none;
+  }
+
+  .toggle-collapse:hover {
+    color: rgb(232, 232, 232);
+  }
+
+  .logo {
+    width: 150px;
+    padding-top: 2px;
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .logo {
+      width: 150px;
     }
 
-    .navbar {
-      width: 100%;
-      font-family: 'Montserrat', sans-serif;
-      color: white;
-      background-color: black;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      font-size: 15px;
-      opacity: 0.7;
-      display: inline-block;
-      overflow: hidden;
-
+    .toggle-collapse {
+      display: inline;
     }
 
     .navbar-nav {
-      margin: 0%;
-      list-style: none;
+      color: white;
+      padding: 0%;
+
+    }
+
+    .nav-item {
+      margin-top: 10px;
+      display: block;
+      width: 100%;
+      opacity: 1;
     }
 
     .nav-item:hover {
       background-color: #ffd63f;
     }
 
-    .nav-item {
-      display: inline-block;
-      text-decoration: none;
-      float: right;
-      padding-top: 5px;
-    }
-
-    .navbar .navbar-collapse .navbar-nav .nav-item a {
-      color: white;
-      text-decoration: none;
-
-    }
-
-    .navbar-nav .nav-item a {
-      text-decoration: none;
-      display: inline-block;
-      font-size: 17px;
-      padding-top: 17px;
-      padding-right: 20px;
-      color: white;
-    }
-
-    .toggle-collapse {
-      float: right;
-      width: 45px;
-      height: 32px;
-      margin-top: -4px;
-      background-color: transparent;
-      color: rgb(232, 232, 232, 0.7);
-      border: 1px solid rgb(232, 232, 232, 0.3);
-      border-radius: 3px;
-      cursor: pointer;
-      display: none;
-    }
-
-    .logotoggle {
-      list-style: none;
-    }
-
-    .toggle-collapse:hover {
-      color: rgb(232, 232, 232);
-    }
-
-    .logo {
-      width: 150px;
-      padding-top: 2px;
-      margin-top: 5px;
-    }
-
-    @media screen and (max-width: 700px) {
-
-      .logo {
-        width: 150px;
-      }
-
-      .toggle-collapse {
-        display: inline;
-      }
-
-      .navbar-nav {
-        color: white;
-        padding: 0%;
-
-      }
-
-      .nav-item {
-        margin-top: 10px;
-        display: block;
-        width: 100%;
-        opacity: 1;
-      }
-
-      .nav-item:hover {
-        background-color: #ffd63f;
-      }
-
-      .navbar-collapse {
-        width: 100%;
-        overflow: hidden;
-        text-align: center;
-        height: 0vh;
-        transition: all 499ms ease;
-      }
-
-      .collapse {
-        heigh: 50vh;
-      }
-
-    }
-
-    .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 30px;
-      font-family: Bungee;
-      text-align: center;
-    }
-
-    .bg {
-      background-image: url("http://www.decodersftc.com/IMG_0820.jpg");
-      height: 100%;
+    .navbar-collapse {
       width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
+      overflow: hidden;
+      text-align: center;
+      height: 0vh;
+      transition: all 499ms ease;
     }
 
-    .subheading {
-      position: static;
-      top: 110vh;
-      left: 50%;
-      color: black;
-      font-size: 30px;
-      font-family: Bungee;
-      text-align: center;
+    .collapse {
+      heigh: 50vh;
     }
 
-    .paragraph {
-      padding-left: 2vw;
-      padding-right: 2vw;
-      position: static;
-      top: 110%;
-      color: black;
-      font-size: 15px;
-      font-family: Montserrat;
-      text-align: center;
-    }
+  }
 
-    .subheading2 {
-      position: static;
-      top: 20%;
-      color: black;
-      font-size: 30px;
-      font-family: Bungee;
-      text-align: center;
-    }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
 
-    .paragraph2 {
-      padding-left: 2vw;
-      padding-right: 2vw;
-      position: static;
-      top: 110%;
-      color: black;
-      font-size: 15px;
-      font-family: Montserrat;
-      text-align: center;
-    }
+  .bg {
+    background-image: url("http://www.decodersftc.com/IMG_0820.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .subheading {
+    position: static;
+    top: 110vh;
+    left: 50%;
+    color: black;
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
+
+  .paragraph {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: static;
+    top: 110%;
+    color: black;
+    font-size: 15px;
+    font-family: Montserrat;
+    text-align: center;
+  }
+
+  .subheading2 {
+    position: static;
+    top: 20%;
+    color: black;
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
+
+  .paragraph2 {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: static;
+    top: 110%;
+    color: black;
+    font-size: 15px;
+    font-family: Montserrat;
+    text-align: center;
+  }
 </style>
 
 <head>
@@ -243,238 +233,6 @@
   <p class="paragraph">deCoders robotics team is based out of Palo Alto, CA. We are part of an organization known as FIRST. FIRST encourages STEM learning and helps us build our communication, building, coding, and many other skills.</p>
   <h1 class="subheading2"><b>What is FTC</b></h1>
   <p class="paragraph2">FIRST encourages STEM learning and helps us build our communication, building, coding, and many other skills. It gives m</p>
-</body>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-<script>
-  $(document).ready(function() {
-    $('.toggle-collapse').click(function() {
-      $('.navbar-collapse').toggleClass("collapse")
-    });
-  });
-</script>
-
-<script>
-  function toggleText() {
-    var text = document.getElementById("centered");
-    if (text.style.display == "none") {
-      text.style.display = "block";
-    } else {
-      text.style.display = "none";
-    }
-  }
-</script>
-
-
-
-</html>ntserrat', sans-serif;
-color: white;
-background-color: black;
-float: left;
-border: none;
-outline: none;
-cursor: pointer;
-font-size: 15px;
-opacity: 0.7;
-display: inline-block;
-overflow: hidden;
-}
-
-.navbar-nav {
-margin: 0%;
-list-style: none;
-}
-
-.nav-item:hover {
-background-color: #ffd63f;
-}
-
-.nav-item {
-display: inline-block;
-text-decoration: none;
-float: right;
-padding-top: 5px;
-}
-
-.navbar .navbar-collapse .navbar-nav .nav-item a {
-color: white;
-text-decoration: none;
-
-}
-
-.navbar-nav .nav-item a {
-text-decoration: none;
-display: inline-block;
-font-size: 17px;
-padding-top: 17px;
-padding-right: 20px;
-color: white;
-}
-
-.toggle-collapse {
-float: right;
-width: 45px;
-height: 32px;
-margin-top: -4px;
-background-color: transparent;
-color: rgb(232, 232, 232, 0.7);
-border: 1px solid rgb(232, 232, 232, 0.3);
-border-radius: 3px;
-cursor: pointer;
-display: none;
-}
-
-.logotoggle {
-list-style: none;
-}
-
-.toggle-collapse:hover {
-color: rgb(232, 232, 232);
-}
-
-.logo {
-width: 150px;
-padding-top: 2px;
-margin-top: 5px;
-}
-
-@media screen and (max-width: 700px) {
-
-.logo {
-width: 150px;
-}
-
-.toggle-collapse {
-display: inline;
-}
-
-.navbar-nav {
-color: white;
-padding: 0%;
-
-}
-
-.nav-item {
-margin-top: 10px;
-display: block;
-width: 100%;
-opacity: 1;
-}
-
-.nav-item:hover {
-background-color: #ffd63f;
-}
-
-.navbar-collapse {
-width: 100%;
-overflow: hidden;
-text-align: center;
-height: 0vh;
-transition: all 499ms ease;
-}
-
-.collapse {
-heigh: 100vh;
-}
-.paragraph{
-font-size:15px;
-}
-.subheading{
-font-size:15px;
-}
-}
-
-.centered {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-font-size: 30px;
-font-family: Bungee;
-}
-
-.bg {
-background-image: url("http://www.montana.edu/first/_ldp/.private_ldp/a4112/production/master/1f31fa42-a266-4ca2-9e92-f438dc576368.jpg");
-height: 100%;
-width: 100%;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.subheading {
-padding-bottom:10vh;
-text-align: center;
-position: absolute;
-top: 110%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: black;
-font-size: 30px;
-font-family: Bungee;
-}
-
-.paragraph {
-padding-bottom:10vh;
-position: absolute;
-top: 117%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: black;
-font-size: 15px;
-font-family: Montserrat;
-text-align: center;
-}
-</style>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA Compatible" conent="ie=edge">
-  <title>deCoders Robotics Team</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/5cd35194e6.js"></script>
-</head>
-
-<body>
-  <nav>
-    <div class="navbar">
-      <div class="navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="outreach.html">Outreach</a>
-          </li>
-          <li class="nav-item">
-            <a href="challenges.html">Challenges</a>
-          </li>
-          <li class="nav-item">
-            <a href="aboutus.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="calendar.html">Calendar</a>
-          </li>
-          <li class="nav-item">
-            <a href="join.html">Join</a>
-          </li>
-          <li class="nav-item">
-            <a href="home.html">Home</a>
-          </li>
-      </div>
-      <button class="toggle-collapse" onclick="toggleText()">
-        <i class="fas fa-bars"></i>
-      </button>
-      <a href="home.html" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
-      </ul>
-  </nav>
-  <div class="bg"></div>
-  <h1 id="centered" class="centered will_show">Challenges</h1>
-  <h1 class="subheading"><b>The challenge we are currently working on is:</b></h1>
-  <p class="paragraph">The challenge for the 2019-20 season has not been posted. Check back in September to see what we're working on.</p>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
