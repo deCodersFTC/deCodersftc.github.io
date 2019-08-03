@@ -20,6 +20,7 @@
     opacity: 0.7;
     display: inline-block;
     overflow: hidden;
+
   }
 
   .navbar-nav {
@@ -116,14 +117,9 @@
     }
 
     .collapse {
-      heigh: 100vh;
+      heigh: 50vh;
     }
-    .paragraph{
-      font-size:15px;
-    }
-    .subheading{
-      font-size:15px;
-    }
+
   }
 
   .centered {
@@ -134,10 +130,11 @@
     color: white;
     font-size: 30px;
     font-family: Bungee;
+    text-align: center;
   }
 
   .bg {
-    background-image: url("http://www.montana.edu/first/_ldp/.private_ldp/a4112/production/master/1f31fa42-a266-4ca2-9e92-f438dc576368.jpg");
+    background-image: url("http://www.decodersftc.com/IMG_0820.jpg");
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -145,23 +142,40 @@
   }
 
   .subheading {
-    padding-bottom:10vh;
-    text-align: center;
-    position: absolute;
-    top: 105%;
+    position: static;
+    top: 110vh;
     left: 50%;
-    transform: translate(-50%, -50%);
     color: black;
     font-size: 30px;
     font-family: Bungee;
+    text-align: center;
   }
 
   .paragraph {
-    padding-bottom:10vh;
-    position: absolute;
-    top: 117%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: static;
+    top: 110%;
+    color: black;
+    font-size: 15px;
+    font-family: Montserrat;
+    text-align: center;
+  }
+
+  .subheading2 {
+    position: static;
+    top: 20%;
+    color: black;
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
+
+  .paragraph2 {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: static;
+    top: 110%;
     color: black;
     font-size: 15px;
     font-family: Montserrat;
@@ -204,7 +218,7 @@
             <a href="join.html">Join</a>
           </li>
           <li class="nav-item">
-            <a href="home.html">Home</a>
+            <a href="home.html"><u>Home</u></a>
           </li>
       </div>
       <button class="toggle-collapse" onclick="toggleText()">
@@ -217,6 +231,8 @@
   <h1 id="centered" class="centered will_show">deCoders Robotics Team</h1>
   <h1 class="subheading"><b>What we do</b></h1>
   <p class="paragraph">deCoders robotics team is based out of Palo Alto, CA. We are part of an organization known as FIRST. FIRST encourages STEM learning and helps us build our communication, building, coding, and many other skills.</p>
+  <h1 class="subheading2"><b>What is FTC</b></h1>
+  <p class="paragraph2">FIRST encourages STEM learning and helps us build our communication, building, coding, and many other skills. It gives m</p>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
