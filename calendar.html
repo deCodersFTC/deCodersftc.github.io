@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+  }
+
   .navbar {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -12,7 +18,7 @@
     cursor: pointer;
     font-size: 15px;
     opacity: 0.7;
-    display:inline-block;
+    display: inline-block;
     overflow: hidden;
   }
 
@@ -20,15 +26,16 @@
     margin: 0%;
     list-style: none;
   }
-  .nav-item:hover{
-    background-color:#ffd63f;
+
+  .nav-item:hover {
+    background-color: #ffd63f;
   }
 
   .nav-item {
     display: inline-block;
     text-decoration: none;
     float: right;
-    padding-top:5px;
+    padding-top: 5px;
   }
 
   .navbar .navbar-collapse .navbar-nav .nav-item a {
@@ -50,6 +57,7 @@
     float: right;
     width: 45px;
     height: 32px;
+    margin-top: -4px;
     background-color: transparent;
     color: rgb(232, 232, 232, 0.7);
     border: 1px solid rgb(232, 232, 232, 0.3);
@@ -57,40 +65,46 @@
     cursor: pointer;
     display: none;
   }
-  .logotoggle{
+
+  .logotoggle {
     list-style: none;
   }
+
   .toggle-collapse:hover {
     color: rgb(232, 232, 232);
   }
 
   .logo {
-    width: 100px;
+    width: 150px;
     padding-top: 2px;
-    bottom: 10%
+    margin-top: 5px;
   }
 
   @media screen and (max-width: 700px) {
 
     .logo {
-      width: 100px;
+      width: 150px;
     }
 
     .toggle-collapse {
       display: inline;
     }
+
     .navbar-nav {
       color: white;
       padding: 0%;
 
     }
-    .nav-item{
+
+    .nav-item {
       margin-top: 10px;
-      display:block;
-      width:100%;
+      display: block;
+      width: 100%;
+      opacity: 1;
     }
-    .nav-item:hover{
-      background-color:#ffd63f;
+
+    .nav-item:hover {
+      background-color: #ffd63f;
     }
 
     .navbar-collapse {
@@ -102,16 +116,24 @@
     }
 
     .collapse {
-      height: 100vh;
+      heigh: 100vh;
+    }
+    .paragraph{
+      font-size:15px;
+    }
+    .subheading{
+      font-size:15px;
     }
   }
 
   .centered {
-    font-family: Philosopher;
-    text-align: center;
+    position: absolute;
     top: 50%;
-    color: black;
-    padding-top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-family: Bungee;
   }
 
   .bg {
@@ -122,15 +144,38 @@
     background-size: cover;
   }
 
+  .subheading {
+    padding-bottom:10vh;
+    text-align: center;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 30px;
+    font-family: Bungee;
+  }
 
+  .paragraph {
+    padding-bottom:10vh;
+    position: absolute;
+    top: 117%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 15px;
+    font-family: Montserrat;
+    text-align: center;
+  }
 </style>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA Compatible" conent="ie=edge">
-  <title>Responsive Navigation</title>
+  <title>deCoders Robotics Team</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Style.css">
   <script src="https://kit.fontawesome.com/5cd35194e6.js"></script>
 </head>
@@ -161,22 +206,18 @@
           <li class="nav-item">
             <a href="home.html">Home</a>
           </li>
-          </div>
-          <ul class="logotoggle">
-            <li>
-              <button class="toggle-collapse">
-                <i class="fas fa-align-center"></i>
-              </button>
-            </li>
-          <li>
-            <a href="#" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
-          </li>
-        </ul>
-        </ul>
-
+      </div>
+      <button class="toggle-collapse" onclick="toggleText()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="#" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
+      </ul>
   </nav>
-  <div class="bg"></div>
-  <!-- <h1 class="centered">deCoders Robotics Team</h1> -->
+  <iframe src="https://calendar.google.com/calendar/embed?src=decoders18%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <!-- <div class="bg"></div>
+  <h1 id="centered" class="centered will_show">deCoders Robotics Team</h1> -->
+  <!-- <h1 class="subheading"><b>What we do</b></h1>
+  <p class="paragraph">deCoders robotics team is based out of Palo Alto, CA. We are part of an organization known as FIRST. FIRST encourages STEM learning and helps us build our communication, building, coding, and many other skills.</p> -->
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
@@ -184,8 +225,21 @@
   $(document).ready(function() {
     $('.toggle-collapse').click(function() {
       $('.navbar-collapse').toggleClass("collapse")
-    })
+    });
   });
 </script>
+
+<script>
+  function toggleText() {
+    var text = document.getElementById("centered");
+    if (text.style.display == "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+</script>
+
+
 
 </html>
