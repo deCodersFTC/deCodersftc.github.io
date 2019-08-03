@@ -228,7 +228,7 @@
       </ul>
   </nav>
   <div class="bg"></div>
-  <h1 id="centered" class="centered will_show">deCoders Robotics Team</h1>
+  <h1 id="centered" class="centered">deCoders Robotics Team</h1>
   <h1 class="subheading"><b>What we do</b></h1>
   <p class="paragraph">deCoders robotics team is based out of Palo Alto, CA. We are part of an organization known as FIRST. FIRST encourages STEM learning and helps us build our communication, building, coding, and many other skills.</p>
   <h1 class="subheading2"><b>What is FTC</b></h1>
@@ -248,7 +248,9 @@
   function toggleText() {
     var text = document.getElementById("centered");
     if (text.style.display == "none") {
-      text.style.display = "block";
+      setTimeout(function() {
+        text.style.display = "block";
+      }, 500);
     } else {
       text.style.display = "none";
     }
