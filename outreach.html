@@ -48,8 +48,8 @@
   .navbar-nav .nav-item a {
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
-    padding-top: 17px;
+    font-size: 15px;
+    padding-top: 8px;
     padding-right: 20px;
     color: white;
   }
@@ -58,7 +58,7 @@
     float: right;
     width: 45px;
     height: 32px;
-    margin-top: -4px;
+    margin-top: 5px;
     background-color: transparent;
     color: rgb(232, 232, 232, 0.7);
     border: 1px solid rgb(232, 232, 232, 0.3);
@@ -81,7 +81,7 @@
     margin-top: 5px;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 710px) {
 
     .logo {
       width: 150px;
@@ -117,7 +117,7 @@
     }
 
     .collapse {
-      heigh: 50vh;
+      height: 70vh;
     }
 
   }
@@ -191,7 +191,129 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/5cd35194e6.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+</style>
+
 </head>
 
 <body>
@@ -222,9 +344,9 @@
           </li>
       </div>
       <button class="toggle-collapse" onclick="toggleText()">
-        <i class="fas fa-bars"></i>
+        <i class="fa fa-bars"></i>
       </button>
-      <a href="#" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
+      <a href="decodersftc.com" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
       </ul>
   </nav>
   <div class="bg"></div>
@@ -233,6 +355,8 @@
   <p class="paragraph">Our team organizes a range of outreach events. We participate in parades, code marathons, organizes summer camps, and come to schools to promote STEAM learning.</p>
   <h1 class="subheading2"><b>When is our next Outreach Event?</b></h1>
   <p class="paragraph2">Check the calendar section of our website to see when our next outreach event is.</p>
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-instagram"></a>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
@@ -245,14 +369,16 @@
 </script>
 
 <script>
-  function toggleText() {
-    var text = document.getElementById("centered");
-    if (text.style.display == "none") {
+function toggleText() {
+  var text = document.getElementById("centered");
+  if (text.style.display == "none") {
+    setTimeout(function() {
       text.style.display = "block";
-    } else {
-      text.style.display = "none";
-    }
+    }, 500);
+  } else {
+    text.style.display = "none";
   }
+}
 </script>
 
 

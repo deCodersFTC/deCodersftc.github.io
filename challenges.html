@@ -48,8 +48,8 @@
   .navbar-nav .nav-item a {
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
-    padding-top: 17px;
+    font-size: 15px;
+    padding-top: 8px;
     padding-right: 20px;
     color: white;
   }
@@ -58,7 +58,7 @@
     float: right;
     width: 45px;
     height: 32px;
-    margin-top: -4px;
+    margin-top: 5px;
     background-color: transparent;
     color: rgb(232, 232, 232, 0.7);
     border: 1px solid rgb(232, 232, 232, 0.3);
@@ -81,7 +81,7 @@
     margin-top: 5px;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 710px) {
 
     .logo {
       width: 150px;
@@ -117,7 +117,7 @@
     }
 
     .collapse {
-      heigh: 50vh;
+      height: 70vh;
     }
 
   }
@@ -191,7 +191,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/5cd35194e6.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -222,9 +222,9 @@
           </li>
       </div>
       <button class="toggle-collapse" onclick="toggleText()">
-        <i class="fas fa-bars"></i>
+        <i class="fa fa-bars"></i>
       </button>
-      <a href="#" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
+      <a href="decodersftc.com" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
       </ul>
   </nav>
   <div class="bg"></div>
@@ -246,14 +246,16 @@
 </script>
 
 <script>
-  function toggleText() {
-    var text = document.getElementById("centered");
-    if (text.style.display == "none") {
+function toggleText() {
+  var text = document.getElementById("centered");
+  if (text.style.display == "none") {
+    setTimeout(function() {
       text.style.display = "block";
-    } else {
-      text.style.display = "none";
-    }
+    }, 500);
+  } else {
+    text.style.display = "none";
   }
+}
 </script>
 
 
