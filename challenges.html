@@ -119,7 +119,6 @@
     .collapse {
       height: 90vh;
     }
-
   }
 
   .centered {
@@ -128,9 +127,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(255, 215, 0);
-    font-size: 30px;
+    /* font-size: 30px; */
     font-family: Bungee;
     text-align: center;
+    width: 70%;
+    height: 70%;
   }
 
   .bg {
@@ -302,6 +303,19 @@
     background: #ff6600;
     color: white;
   }
+
+  .aIndiaRerunPhoto {
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0, 0.025);
+    font-size: 5px;
+    font-family: Bungee;
+    text-align: center;
+    width: 70%;
+    height: 70%;
+  }
 </style>
 
 <head>
@@ -349,12 +363,16 @@
       </ul>
   </nav>
   <div class="bg"></div>
-  <h1 id="centered" class="centered will_show">Challenges</h1>
-  <h1 class="subheading"><b>The new FTC Tech Challenge</b></h1>
-  <p class="paragraph">Watch the new FTC Challenge here</p>
-  <h1 class="subheading2"><b>Our new FTC Challenge Live Stream</b></h1>
+  <!-- <h1 id="centered" class="centered will_show">Challenges</h1> -->
+  <!-- <h1 class="subheading"><b>The current FTC Tech Challenge</b></h1> -->
+  <!-- <p class="paragraph">Watch the new FTC Challenge here</p>
+  <h1 class="subheading2"><b>Our new FTC Challenge Live Stream</b></h1> -->
   <!-- <p class="paragraph2"></p> -->
-  <iframe src="https://player.twitch.tv/?channel=firstinspires" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe><a href="https://www.twitch.tv/firstinspires?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from FIRSTinspires on www.twitch.tv</a>
+  <div class="centered"><iframe width=100% height=100% src="https://www.youtube.com/embed/XiGB_8Ppnbs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  <h1 class="aIndiaRerunPhoto">Anirudh Bharadwaj was the biggest challenge</h1>
+  <a href="https://www.facebook.com/decodersftc" target="_blank" class="icons fa fa-facebook"></a>
+  <a href="https://twitter.com/decodersftc" target="_blank" class="icons fa fa-twitter"></a>
+  <a href="https://www.instagram.com/decodersftc/" target="_blank" class="icons fa fa-instagram"></a>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
@@ -367,16 +385,14 @@
 </script>
 
 <script>
-function toggleText() {
-  var text = document.getElementById("centered");
-  if (text.style.display == "none") {
-    setTimeout(function() {
-      text.style.display = "block";
-    }, 500);
-  } else {
-    text.style.display = "none";
+  function myFunction() {
+    var x = document.getElementById('centered');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+    } else {
+      x.style.display = 'none';
+    }
   }
-}
 </script>
 
 
