@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .navbar {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.7;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .navbar-nav {
+    margin: 0%;
+    list-style: none;
+  }
+
+  .nav-item:hover {
+    background-color: #ffd63f;
+    height: 39px;
+    color: #000000;
+  }
+
+  .nav-item {
+    display: inline-block;
+    text-decoration: none;
+    float: right;
+    padding-top: 5px;
+    color: white;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .nav-item a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .navbar-nav .nav-item a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+  }
+
+  .toggle-collapse {
+    float: right;
+    width: 45px;
+    height: 32px;
+    margin-top: 5px;
+    background-color: transparent;
+    color: rgb(232, 232, 232, 0.7);
+    border: 1px solid rgb(232, 232, 232, 0.3);
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .logotoggle {
+    list-style: none;
+  }
+
+  .toggle-collapse:hover {
+    color: rgb(232, 232, 232);
+  }
+
+  .logo {
+    width: 150px;
+    padding-top: 2px;
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width: 730px) {
+
+    .logo {
+      width: 150px;
+    }
+
+    .toggle-collapse {
+      display: inline;
+    }
+
+    .navbar-nav {
+      color: white;
+      padding: 0%;
+    }
+
+    .nav-item {
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+      opacity: 1;
+    }
+
+    .nav-item:hover {
+      background-color: #ffd63f;
+    }
+
+    .navbar-collapse {
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      height: 0vh;
+      transition: all 499ms ease;
+    }
+
+    .collapse {
+      height: 90vh;
+    }
+
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 215, 0);
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
+
+  /* .bg {
+    background-image: url("http://www.decodersftc.com/decoders.gif");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+
+  .subheading {
+    position: static;
+    top: 110vh;
+    left: 50%;
+    color: black;
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
+
+  .paragraph {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 10vw;
+    position: static;
+    top: 110%;
+    color: black;
+    font-size: 15px;
+    font-family: Montserrat;
+    text-align: center;
+  }
+
+  .subheading2 {
+    position: static;
+    top: 20%;
+    color: black;
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
+
+  .paragraph2 {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: static;
+    top: 110%;
+    color: black;
+    font-size: 15px;
+    font-family: Montserrat;
+    text-align: center;
+  }
+
+  .subheading3 {
+    position: static;
+    top: 20%;
+    color: black;
+    font-size: 30px;
+    font-family: Bungee;
+    text-align: center;
+  }
+
+  .paragraph3 {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: static;
+    top: 110%;
+    color: black;
+    font-size: 15px;
+    font-family: Montserrat;
+    text-align: center;
+  }
+
+  .icons {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  .fa-skype {
+    background: #00aff0;
+    color: white;
+  }
+
+  .fa-android {
+    background: #a4c639;
+    color: white;
+  }
+
+  .fa-dribbble {
+    background: #ea4c89;
+    color: white;
+  }
+
+  .fa-vimeo {
+    background: #45bbff;
+    color: white;
+  }
+
+  .fa-tumblr {
+    background: #2c4762;
+    color: white;
+  }
+
+  .fa-vine {
+    background: #00b489;
+    color: white;
+  }
+
+  .fa-foursquare {
+    background: #45bbff;
+    color: white;
+  }
+
+  .fa-stumbleupon {
+    background: #eb4924;
+    color: white;
+  }
+
+  .fa-flickr {
+    background: #f40083;
+    color: white;
+  }
+
+  .fa-yahoo {
+    background: #430297;
+    color: white;
+  }
+
+  .fa-soundcloud {
+    background: #ff5500;
+    color: white;
+  }
+
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+
+  .fa-rss {
+    background: #ff6600;
+    color: white;
+  }
+</style>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA Compatible" conent="ie=edge">
+  <title>deCoders Robotics Team</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="outreach.html">Outreach</a>
+          </li>
+          <li class="nav-item">
+            <a href="challenges.html"><u>Challenges</u></a>
+          </li>
+          <li class="nav-item">
+            <a href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="calendar.html">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a href="join.html">Join</a>
+          </li>
+          <li class="nav-item">
+            <a href="home.html">Home</a>
+          </li>
+      </div>
+      <button class="toggle-collapse" onclick="toggleText()">
+        <i class="fa fa-bars"></i>
+      </button>
+      <a href="home.html" class="navBrand"><img class="logo" src="https://i.imgur.com/lfx7ueK.png"></a>
+      </ul>
+  </nav>
+  <div class="bg"></div>
+  <!-- <h1 id="centered" class="centered">deCoders Robotics Team</h1> -->
+  <!-- <h1 class="subheading"><b>Who are we?</b></h1> -->
+  <p class="paragraph">This webpage is temporarily offline due to maintenance. We apologize for the inconvenience</p>
+  <!-- <h1 class="subheading2"><b>What is FTC</b></h1>
+  <p class="paragraph2">FIRST encourages STEM learning and helps us build our communication, building, coding, and many other skills. FIRST's mission according to their website is to: "The mission of FIRST® is to inspire young people to be science and technology leaders and innovators, by engaging them in exciting mentor-based programs that build science, engineering, and technology skills, that inspire innovation, and that foster well-rounded life capabilities including self-confidence, communication, and leadership."</p>
+  <h1 class="subheading3"><b>Team Impact</b></h1>
+  <p class="paragraph3">Our team worked hard on our robot and came very far last season. In our first competition, our team placed second overall, and came runner-up for the Control Award. We work hard to improve our robot and have made significant progress since the start of last season. Over the course of this season, we are attempting to win the most prestigious award - the Inspire Award. The Inspire Award is given to the team which helped most with spreading STEM learning.</p> -->
+  <!-- <a href="https://www.facebook.com/decodersftc" target="_blank" class="icons fa fa-facebook"></a> -->
+  <!-- <a href="https://twitter.com/decodersftc" target="_blank" class="icons fa fa-twitter"></a>
+  <a href="https://www.instagram.com/decodersftc/" target="_blank" class="icons fa fa-instagram"></a> --> -->
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    $('.toggle-collapse').click(function() {
+      $('.navbar-collapse').toggleClass("collapse")
+    });
+  });
+</script>
+
+<script>
+  function toggleText() {
+    var text = document.getElementById("centered");
+    if (text.style.display == "none") {
+      setTimeout(function() {
+        text.style.display = "block";
+      }, 500);
+    } else {
+      text.style.display = "none";
+    }
+  }
+</script>
+
+
+
+</html>
